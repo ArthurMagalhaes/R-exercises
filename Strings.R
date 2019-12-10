@@ -51,9 +51,31 @@ y <- c("road", "railroad", "air", "Water")
 cat(x, y, sep = "#")
 
 # Ex 10
-print(x)
+
 x <- "I learn how to write code in R."
 x <- chartr("e", "w", x)
 x <- chartr("h", "--", x)
-x <- chartr("ow", "#\", x)
+x <- chartr("ow", "#\\", x)
+print(x)
+
+# Ex 11
+
+names <- c("Timothy", "Marianne", "Margaret", "Christian")
+substr(names, 2, 5)
+substr(names, 5, 5) <- '-'
+print(names)
+substr(names, 5, 7) <- 'www'
+print(names)
+substr(names, 3, 5) <- c("123", "789", "024", "357")
+print(names)
+
+# Ex 12
+
+strsplit("352:611:733", split = ":")
+strsplit("Santa Mônica", split = " ")
+strsplit("Colorado", split = "o")
+strsplit("management", split = "")
+
+# Ex 13
+
 
