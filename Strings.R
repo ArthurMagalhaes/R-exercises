@@ -78,4 +78,14 @@ strsplit("management", split = "")
 
 # Ex 13
 
+adjectives <- c("strong", "impressive", "arrogant", "compress", "stimulate", "instructive")
 
+grep("ro", adjectives)
+grepl("ro", adjectives)
+regexpr("ro", adjectives)
+gregexpr("ro", adjectives)
+
+# Ex 14
+
+words <- c("stop", "instead", "forecast", "castle")
+gsub("st", "#", words)
