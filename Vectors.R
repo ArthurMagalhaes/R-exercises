@@ -42,4 +42,28 @@ c
 
 # Ex 10
 
-d <- sample()
+d <- sample(3:9, 100, replace = TRUE)
+d
+
+# Ex 11
+
+e <- c(0:9, runif(50, 10, 45))
+e
+
+# Ex 12
+
+f <- rnorm(20, 3, 10)
+f
+
+# Ex 13
+
+g <- runif(20, 1, 50)
+g
+
+# Ex 14
+
+rep(g, each=3)
+
+# Ex 15
+
+
