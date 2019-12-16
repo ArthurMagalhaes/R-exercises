@@ -117,3 +117,40 @@ m15a
 m15b
 m15c <- m15a %*% m15b
 m15c
+
+# Ex 16
+
+m16 <- matrix(sample(100, 16), nrow = 4, byrow = TRUE)
+det(m16)
+diag(m16)
+
+# Ex 17
+
+solve(m16)
+
+# Ex 18
+
+m18 <- matrix(0, nrow = 6, ncol = 6)
+diag(m18) <- c(23, 4, 51, 69, 14, 36)
+m18
+
+# Ex 19
+
+m19 <- matrix(0, 10, 10)
+diag(m19) <- rep(1, 10)
+m19
+
+# Ex 20
+
+r <- matrix(rnorm(12, 2, 5), nrow = 3)
+s <- matrix(rnorm(12, 3, 4), ncol = 4, byrow = TRUE)
+
+m20 <- array(c(r, s), dim = c(3, 4, 2))
+m20[,2,1]
+
+# Ex 21
+
+m20[2,3,1]
+t(m20[3,,])
+m20[,2,]
+m20[1,4,]
