@@ -22,13 +22,13 @@ atualizaPesos = function(input, weights, learning_rate, error){
   return(x)
 }
 
-treinamento = function(ages, input, output, weights, learning_rate){
-  s = length(input[,1])
+treinamento = function(ages, inputs, output, weights, learning_rate){
+  s = length(inputs[,1])
   for (i in seq(ages)){
     for (j in seq(s)){
-      out <- input[j,] %*% weights
+      out <- inputs[j,] %*% weights
       e = step(out[1]) - output[j]
-      weights = atualizaPesos(input[j,], weights, learning_rate = learning_rate, abs(e))
+      weights = atualizaPesos(inputs[j,], weights, learning_rate = learning_rate, abs(e))
     }
   }
   return(weights)
