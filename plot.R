@@ -15,5 +15,15 @@ x <- read.delim('arquivos/poker-hand-training-true.data', header = F, sep = ',',
 colnames(x) <- c('S1', 'C1', 'S2', 'C2', 'S3', 'C3', 'S4', 'C4', 'S5', 'C5', 'Poker Hand')
 
 x <- read.csv('datasets/forestfires.csv', stringsAsFactors = F)
-plot(x$wind~x$temp)
-fit <- lm(x$wind, x$temp)
+
+days <- seq(7)
+names(days) <- c('sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat')
+days['mon'][1]
+for (d in 1:length(x[,1])){
+  x$day[d] <- days[x$day[d]]
+}
+plot(x$ISI~x$day, xlab = 'Days of week', ylab = 'ISI')
+
+par(bg = 'lightgray')
+plot(x$DMC~x$DC, xlab = 'DC', ylab = 'DMC', col = 'darkgreen', cex.lab = 0.9, pch = 20, font.lab = 3)
+fit <- lm(x$day, x$ISI)
